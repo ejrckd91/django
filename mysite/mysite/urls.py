@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+##최상위 URLpatterns 서브URLpatterns는 각각의 app마다 urls.py에
 urlpatterns = [
     url(r'^admin/', admin.site.urls),#다양한 url패턴을 등록
     url(r'^blog/', include('blog.urls')), #blog/urls.py 에 등록된 내용을 포함하라는 의미.
+    url(r'^dojo/', include('dojo.urls')),
 ]
