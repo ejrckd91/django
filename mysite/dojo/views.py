@@ -9,3 +9,8 @@ def mysum(request, numbers):#모든 view함수는 첫번쨰 인자가 request
     #numbers = "1/2/12/123/1234/123/121233"
     result = sum(map(int,numbers.split("/")))
     return HttpResponse(result)#view의 인자로 넘겨 받은 값들은 모두 문자열
+
+def hello(request, name, age):
+    
+    return HttpResponse('안녕하세요. {}님. {}살이시네요.'.format(name,age))
+    
